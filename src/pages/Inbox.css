@@ -1,0 +1,511 @@
+
+.inbox-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 0 30px;
+  color: #20263a;
+}
+
+.inbox-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.inbox-heading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 17px;
+  background: #eeefff;
+  color: #5b55ee;
+}
+
+.inbox-heading-text {
+  flex: 1;
+}
+
+.inbox-heading-text h2 {
+  margin: 0 0 6px;
+  font-size: 27px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.inbox-heading-text p {
+  margin: 0;
+  color: #7a8194;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.inbox-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid #e6e8f3;
+  border-radius: 30px;
+  background: #fff;
+  color: #535b70;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.inbox-count-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #615cf3;
+}
+
+.inbox-summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 19px 22px;
+  margin-bottom: 24px;
+  border: 1px solid #e4e5ff;
+  border-radius: 16px;
+  background: linear-gradient(110deg, #f3f2ff 0%, #fafaff 100%);
+}
+
+.inbox-summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #e4e3ff;
+  color: #625cf2;
+}
+
+.inbox-summary h3 {
+  margin: 0 0 5px;
+  color: #303451;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.inbox-summary p {
+  margin: 0;
+  color: #777d95;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.inbox-panel {
+  overflow: hidden;
+  border: 1px solid #e9eaf1;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 5px 22px rgba(34, 40, 80, 0.035);
+}
+
+.inbox-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 18px 21px;
+  border-bottom: 1px solid #eff0f5;
+}
+
+.inbox-filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.inbox-filter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 15px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #737b8f;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.inbox-filter:hover {
+  background: #f6f6ff;
+  color: #5752e9;
+}
+
+.inbox-filter.active {
+  border-color: #e4e3ff;
+  background: #efefff;
+  color: #5650e8;
+}
+
+.inbox-filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  border-radius: 20px;
+  background: #dedcff;
+  color: #4e48d8;
+  font-size: 11px;
+}
+
+.inbox-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.inbox-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 11px;
+  border: 1px solid #e9eaf1;
+  border-radius: 9px;
+  background: #fff;
+  color: #61697d;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.inbox-actions button:hover:not(:disabled) {
+  border-color: #d7d5ff;
+  background: #f7f6ff;
+  color: #5751e8;
+}
+
+.inbox-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.inbox-actions .inbox-clear-button:hover:not(:disabled) {
+  border-color: #ffdada;
+  background: #fff4f4;
+  color: #d74444;
+}
+
+.inbox-list {
+  padding: 9px 16px;
+}
+
+.notification-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 19px 15px;
+  margin: 7px 0;
+  border: 1px solid transparent;
+  border-bottom-color: #f0f1f6;
+  border-radius: 13px;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.notification-card:last-child {
+  border-bottom-color: transparent;
+}
+
+.notification-card:hover {
+  border-color: #e8e7ff;
+  background: #fafaff;
+}
+
+.notification-card.unread {
+  background: #f8f8ff;
+}
+
+.notification-card.unread:hover {
+  background: #f1f1ff;
+}
+
+.notification-card.read {
+  opacity: 0.87;
+}
+
+.notification-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #eeeeff;
+  color: #6059ed;
+}
+
+.notification-icon.task {
+  background: #eeeeff;
+  color: #6059ed;
+}
+
+.notification-icon.deadline {
+  background: #fff3df;
+  color: #cf8b20;
+}
+
+.notification-icon.general {
+  background: #e8f7ef;
+  color: #26945d;
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+  padding-top: 1px;
+}
+
+.notification-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 6px;
+}
+
+.notification-title-row h3 {
+  margin: 0;
+  color: #252c40;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.notification-unread-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #625cf3;
+}
+
+.notification-content > p {
+  margin: 0 0 11px;
+  color: #70788c;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.notification-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: #9aa0af;
+  font-size: 11px;
+}
+
+.notification-new-label {
+  margin-left: 5px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  background: #ecebff;
+  color: #5b55e8;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.notification-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-top: 2px;
+}
+
+.notification-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #8b92a3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notification-actions button:hover {
+  border-color: #dcdafe;
+  background: #efefff;
+  color: #5b55e8;
+}
+
+.notification-actions .notification-delete:hover {
+  border-color: #ffdada;
+  background: #fff0f0;
+  color: #db4545;
+}
+
+.inbox-empty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.inbox-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 17px;
+  border-radius: 22px;
+  background: #f0efff;
+  color: #625cf0;
+}
+
+.inbox-empty h3 {
+  margin: 0 0 8px;
+  color: #30364a;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.inbox-empty p {
+  max-width: 360px;
+  margin: 0;
+  color: #858b9d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.inbox-empty > button {
+  margin-top: 18px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #625cf0;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.inbox-empty > button:hover {
+  background: #4f49d9;
+}
+
+.inbox-footer {
+  padding: 14px 21px;
+  border-top: 1px solid #eff0f5;
+  color: #969bad;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .inbox-heading {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .inbox-heading-text h2 {
+    font-size: 23px;
+  }
+
+  .inbox-count {
+    margin-left: auto;
+  }
+
+  .inbox-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .inbox-actions {
+    width: 100%;
+  }
+
+  .inbox-actions button {
+    flex: 1;
+  }
+
+  .inbox-list {
+    padding: 7px;
+  }
+
+  .notification-card {
+    gap: 11px;
+    padding: 15px 9px;
+  }
+
+  .notification-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .notification-title-row h3 {
+    font-size: 14px;
+  }
+
+  .notification-content > p {
+    font-size: 12px;
+  }
+
+  .notification-actions {
+    flex-direction: column;
+  }
+
+  .inbox-summary {
+    align-items: flex-start;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .inbox-heading-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .inbox-count {
+    padding: 8px 10px;
+  }
+
+  .inbox-filters {
+    width: 100%;
+  }
+
+  .inbox-filter {
+    flex: 1;
+    padding: 9px 7px;
+  }
+
+  .inbox-actions button {
+    padding: 9px 7px;
+    font-size: 11px;
+  }
+}
