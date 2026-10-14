@@ -35,17 +35,15 @@ Install [Node.js](https://nodejs.org/) and npm before starting.
 
 ### 1. Clone the repository
 
-```bash
+````bash
 git clone https://github.com/sakshichougule-09/taskflow-dashboard.git
-```
 
-Replace `YOUR-USERNAME` with your GitHub username.
 
 ### 2. Navigate to the project folder
 
 ```bash
 cd taskflow-dashboard
-```
+````
 
 ### 3. Install dependencies
 
